@@ -1,0 +1,120 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Netflix Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+$red-netflix: #e50914;
+$font-color-white: #fff;
+$font-color-gray: #757575;
+@mixin tagA {
+  text-decoration: none;
+  color: $font-color-white;
+
+  &:hover {
+    color: $font-color-gray;
+  }
+}
+
+body {
+  font-size: 16px;
+  background-color: black;
+  color: $font-color-white;
+}
+header {
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0.5rem;
+
+    .navbar-left {
+      display: flex;
+      align-items: center;
+
+      .netflix-svg {
+        margin: 0.5rem 2rem;
+      }
+
+      a {
+        margin-right: 1rem;
+        @include tagA 
+      }
+    }
+
+    .navbar-right {
+      display: flex;
+      align-items: center;
+
+      svg {
+        fill: $font-color-white;
+      }
+      #search {
+        display: none;
+      }
+    }
+  }
+  .banner {
+    .show01 {
+      display: flex;
+      img {
+        width: 100%;
+        object-fit: cover;
+        opacity: 0.6;
+      }
+      .content {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        margin: 10rem 0 0 6rem;
+        width: 40rem;
+
+        .info {
+            font-size:1.5rem;
+            h1{
+                margin: 1rem 0;
+            }
+        }
+
+        .action {
+            display: flex;
+            align-items: center;
+            margin-top: 2rem ;
+
+            @mixin action-button {
+                display: flex;
+                align-items: center;
+                margin-right: 2rem;
+                padding: .5rem ;
+                svg{
+                    fill: $font-color-white;
+                    margin-right:.2rem;
+                   
+                }
+            }
+            
+            .play {
+                @include action-button;
+                background-color: $red-netflix;
+                
+                a{
+                    @include tagA;
+                    padding-right: 0.5rem;
+                }
+            }
+
+            .mylist {
+                @include action-button;
+                background-color: rgba(0, 0, 0, 60%);
+                
+                a{
+                    @include tagA;
+                    
+                }
+            }
+        }
+
+      }
+    }
+  }
+}
