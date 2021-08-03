@@ -1,0 +1,23 @@
+
+function seek(){
+    let search = document.getElementById('search').style;
+
+    if (search.display == "none"){
+        search.display = "block";
+    }
+    else{
+        search.display = "none";
+    }
+    console.log(search.display)
+
+}
+
+let slide = document.getElementsByClassName('title')
+
+console.log(slide.scrollIntoView(true))
+
+
+
+
+
+
