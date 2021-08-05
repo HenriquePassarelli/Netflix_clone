@@ -137,6 +137,8 @@ header {
         .info {
           font-size: 1.5rem;
           h1 {
+            overflow-x: hidden;
+
             margin: 1rem 0;
           }
           .type {
@@ -272,7 +274,23 @@ main {
   }
 }
 
+@media (max-width: 1212px){
+  .content {
+   
+
+    margin-top: 7rem !important;
+  }
+
+}
+
 @media (max-width: 838px) {
+  .content {
+    p {
+      width: 35rem;
+    }
+
+    margin-top: 6rem !important;
+  }
   .navbar-left a {
     display: none;
   }
@@ -280,6 +298,14 @@ main {
 
 @media (max-width: 768px) {
   header {
+    .content {
+      margin-left: 2rem !important;
+
+      width: 30rem !important;
+      p {
+        display: none;
+      }
+    }
     .info {
       width: 65%;
     }
@@ -288,6 +314,14 @@ main {
 
 @media (max-width: 493px) {
   header {
+    .content {
+      width: 300px !important;
+
+      .action{
+        width: 100% !important;
+        margin-right: 1rem !important;
+      }
+    }
     margin-left: -1rem;
     .menu_mobile {
       display: block;
